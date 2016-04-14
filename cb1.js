@@ -20,8 +20,8 @@ function onchange() {
 	//d3.select('body')
 	//	.append('p')
 	//	.text(selectValue + ' is the last selected option.')
-   // console.log(selectValue);
-    
+    console.log(selected);
+   
 };
 
-  console.log(onchange().selectValue);
+  //console.log(onchange().selectValue);

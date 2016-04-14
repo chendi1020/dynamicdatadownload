@@ -2,7 +2,7 @@ d3.text("enrollmentfile.csv", function(data) {
                 var parsedCSV = d3.csv.parseRows(data);
                  var parsedCSV1= [];
                  for (var i=0;i<parsedCSV.length;i++){
-                    if(parsedCSV[i][2]==="Undergraduate" && parsedCSV[i][0]==='FS15' ){
+                    if((parsedCSV[i][2]==="Undergraduate" && parsedCSV[i][0]==='FS15')|| parsedCSV[i]==parsedCSV[0] ){
                         parsedCSV1.push(parsedCSV[i]);
                     }
                     
