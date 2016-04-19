@@ -9,7 +9,7 @@ d3.text("enrollmentfile.csv", function(data) {
                         }   
                     };
         
-          console.log(parsedCSV1);
+
        graph =  d3.select("#dvData")
                     .append("table")
 
