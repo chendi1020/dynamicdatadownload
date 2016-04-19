@@ -22,15 +22,16 @@ d3.text("enrollmentfile.csv", function(data) {
 
 function onchange() {
 	//var selected = this.value;
-    selectValue = d3.select('select')[0][0].value
-   
+    selectValue = d3.select('#lvl')[0][0].value
+   selectValue1 = d3.select('#term')[0][0].value
   
      var parsedCSV1= [];
     d3.text("enrollmentfile.csv", function(data) {
                 var parsedCSV = d3.csv.parseRows(data);
                   console.log(selectValue);
+                  console.log(selectValue1);
                  for (var i=0;i<parsedCSV.length;i++){
-                    if((parsedCSV[i][2]===selectValue && parsedCSV[i][0]==='FS15')|| parsedCSV[i]==parsedCSV[0] ){
+                    if((parsedCSV[i][2]===selectValue && parsedCSV[i][0]===selectValue1)|| parsedCSV[i]==parsedCSV[0] ){
                         parsedCSV1.push(parsedCSV[i]);
                         }   
                     };
